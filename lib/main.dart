@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:planrr/calendar.dart';
 
+import 'home.dart';
+
 void main(){
   runApp(MyApp());
 }
@@ -12,10 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title:"Planrr",
-      home: Calendar(),
+      home: const Home(),
       theme: ThemeData(
-       appBarTheme: AppBarTheme(
-     color: Colors.pink,
+       appBarTheme: const AppBarTheme(
+     color: Colors.blue,
     )),
   );
   }

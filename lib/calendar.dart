@@ -9,6 +9,8 @@ class Calendar extends StatefulWidget {
 }
 
 class _CalendarState extends State<Calendar> {
+
+  //Map<DateTime,List<Event>> selectedEvents;
   CalendarFormat format = CalendarFormat.month;
   DateTime selectedDay = DateTime.now();
   DateTime focusedDay = DateTime.now();
@@ -16,7 +18,7 @@ class _CalendarState extends State<Calendar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title:const Text("Planrr"),
+      appBar: AppBar(title:const Text("Calendar"),
       centerTitle:true,
       ),
       body: TableCalendar(
@@ -34,7 +36,6 @@ class _CalendarState extends State<Calendar> {
           setState(() {
             selectedDay = selectDay;
             focusedDay = focusDay;
-            print(focusDay);
           });
         },
         //Selecting day
@@ -46,14 +47,15 @@ class _CalendarState extends State<Calendar> {
         calendarStyle: const CalendarStyle(
           isTodayHighlighted: true,
           selectedDecoration: BoxDecoration(
-            color: Colors.purple,
+            color: Colors.blueAccent,
             shape: BoxShape.circle,
             ),
             selectedTextStyle: TextStyle(color:Colors.white),
             todayDecoration: BoxDecoration(
-              color: Colors.pink,
+              color: Colors.blueGrey,
               shape: BoxShape.circle,
-            )
+            ),
+            //weekendTextStyle: TextStyle(color: Colors.red),
         ),
         headerStyle: const HeaderStyle(
           formatButtonVisible: false,
