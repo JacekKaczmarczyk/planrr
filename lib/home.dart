@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planrr/sidemenu.dart';
 
 import 'calendar.dart';
 
@@ -8,20 +9,13 @@ const Home({ Key? key }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavDrawer(),
       appBar: AppBar(
         title: const Text('Planrr'),
         centerTitle: true,
       ),
       body: Center(
-        child: ElevatedButton(
-          child: Text('Calendar'),
-          onPressed: () {
-            Navigator.push(
-              context,
-             MaterialPageRoute(builder: (context) => const Calendar()),
-             );
-          },
-          )
+        child: Text('Welcome to home page'),
       ),
     );
   }
