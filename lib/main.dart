@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title:"Planrr",
       home: const Home(),
       theme: ThemeData(
-       appBarTheme: const AppBarTheme(
+      appBarTheme: const AppBarTheme(
      color: Colors.blue,
     )),
   );
