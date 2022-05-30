@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:planrr/calendar.dart';
-import 'package:planrr/goals.dart';
+import 'package:planrr/plans.dart';
+import 'package:planrr/showDatePicker.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -24,7 +25,7 @@ class NavDrawer extends StatelessWidget {
             title: Text('Calendar'),
             onTap: () => {Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const Calendar()),
+              MaterialPageRoute(builder: (context) =>  Calendar()),
              )}, //Navigation to Calendar
           ),
           ListTile(
@@ -32,7 +33,7 @@ class NavDrawer extends StatelessWidget {
             title: Text('Plan list'),
             onTap: () => {Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Goals()),
+              MaterialPageRoute(builder: (context) => Plans()),
              )}, //Navigation to Goal List,
           ),
         ],
